@@ -1,3 +1,8 @@
+** DISCLAIMER **
+This project is an academic project from University of Minnnesota - Twin Cities, CSCI 4271W. In collaboration with two peers, David Smith & Jaime Somero. This project examines a fictional software application, Badly Coded Manager (BCBM). The team was tasked with finding 6 vulnerabilites within the code, drafting proof-of-concept scripts, and writing a report detailing the findings. With permission, I have added this to my personal Github/resume to showcase my ability to find vulnerabilities, test, and implement real fixes to software code. I included the report within the repository to show the entire report and the communication skills I can bring. 
+
+
+
 Below are the instructions for running and executing the attacks. 
 
 Vulnerability ID 1: Weak authentication code spoofing (new_auth_code_brute_force.py)
